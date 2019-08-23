@@ -1,4 +1,4 @@
-package com.cng.entity;
+package com.cng.punishment.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -9,15 +9,17 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- * Human
+ * Employee
  */
 @Entity
-@Table(name = "human")
+@Table(name = "employee")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Human {
+public class Employee extends BaseEntity {
+
+    private static final long serialVersionUID = 5510252186567068589L;
 
     private String name;
 
@@ -25,7 +27,6 @@ public class Human {
 
     private String tc;
 
-    
-
+    private String rutbe;
     
 }

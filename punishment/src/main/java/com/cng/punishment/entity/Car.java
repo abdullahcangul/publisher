@@ -1,4 +1,4 @@
-package com.cng.entity;
+package com.cng.punishment.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;

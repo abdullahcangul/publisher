@@ -1,4 +1,4 @@
-package com.cng.entity;
+package com.cng.punishment.entity;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
