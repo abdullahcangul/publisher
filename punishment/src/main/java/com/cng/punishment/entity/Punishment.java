@@ -23,6 +23,14 @@ public class Punishment {
 
     private String faturaNo;
     private String yer;
-    private String neden;//Genisletilmelidir
     private LocalDateTime FatureKesimTarihi;
+
+    private Human human;
+
+    private Car car;
+
+    private Employee employee;
+
+    private PunishmentType punishmentType;
+
 }

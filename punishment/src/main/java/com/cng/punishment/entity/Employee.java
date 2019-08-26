@@ -1,5 +1,7 @@
 package com.cng.punishment.entity;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -28,5 +30,13 @@ public class Employee extends BaseEntity {
     private String tc;
 
     private String rutbe;
+
+    private String password;
+    
+    private String email;
+
+    private List<Punishment> punishments;
+
+
     
 }

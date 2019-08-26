@@ -11,30 +11,21 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- * Car
+ * PunishmentType
  */
 @Entity
-@Table(name = "car")
+@Table(name = "punishment_type")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Car extends BaseEntity {
+public class PunishmentType extends BaseEntity{
 
-    private static final long serialVersionUID = -6120555270201391428L;
+	private static final long serialVersionUID = 599611300084703243L;
 
-    private String plaka;
-
-    private String renk;
-
-    private String modelYili;
-
-    private String saseNo;
-
-    private String motorNo;
+    private String name;
+    
+    private int fiyat;
 
     private List<Punishment> punishments;
-
-    private Human human;
-
 }

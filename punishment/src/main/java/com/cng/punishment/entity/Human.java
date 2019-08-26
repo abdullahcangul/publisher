@@ -1,5 +1,7 @@
 package com.cng.punishment.entity;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -17,7 +19,9 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Human {
+public class Human extends BaseEntity {
+
+    private static final long serialVersionUID = 6506304641499878570L;
 
     private String name;
 
@@ -25,7 +29,11 @@ public class Human {
 
     private String tc;
 
-    
+    private String tel;
 
-    
+    private String email;
+
+    private List<Punishment> punishments;
+
+    private List<Car> cars;
 }
