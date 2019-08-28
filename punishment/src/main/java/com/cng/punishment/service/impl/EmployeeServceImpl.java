@@ -5,6 +5,7 @@ import java.util.List;
 import com.cng.punishment.entity.Employee;
 import com.cng.punishment.exception.NotFoundException;
 import com.cng.punishment.iu.model.EmployeeDto;
+import com.cng.punishment.iu.model.LoginResponse;
 import com.cng.punishment.repository.EmployeeRepository;
 import com.cng.punishment.service.EmployeeService;
 
@@ -57,6 +58,17 @@ public class EmployeeServceImpl implements EmployeeService {
 	public void Delete(Long id) {
         employeeRepository.deleteById(id);
 	}
+
+
+    @Override
+    public LoginResponse login(String email,String passwod) {
+        Employee employee=employeeRepository.findByEmail(email).orElseThrow();
+        if(passwod.equals(employee.getPassword())){
+            return new LoginResponse(Boolean.TRUE,employee); 
+        }
+        return new LoginResponse(Boolean.FALSE,employee); 
+        
+    }
 
     
 }

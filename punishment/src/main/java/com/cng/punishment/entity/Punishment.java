@@ -23,7 +23,7 @@ public class Punishment {
 
     private String faturaNo;
     private String yer;
-    private LocalDateTime FatureKesimTarihi;
+    private LocalDateTime CezaKesimTarihi;
 
     private Human human;
 

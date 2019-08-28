@@ -7,6 +7,8 @@ import javax.validation.Valid;
 import com.cng.punishment.entity.Employee;
 import com.cng.punishment.exception.NotFoundException;
 import com.cng.punishment.iu.model.EmployeeDto;
+import com.cng.punishment.iu.model.LoginReguest;
+import com.cng.punishment.iu.model.LoginResponse;
 import com.cng.punishment.service.EmployeeService;
 
 import org.springframework.http.HttpStatus;
@@ -58,4 +60,11 @@ public class EmployeeController {
         employeeService.Delete(id);
         return ResponseEntity.status(HttpStatus.ACCEPTED).build();
     }
+
+    //deneme
+    @GetMapping("/login")
+    public ResponseEntity<LoginResponse> getEmployees(@RequestBody LoginReguest l) throws NotFoundException{
+        return ResponseEntity.ok(employeeService.login(l.getEmail(), l.getPassword()));
+    }
+    
 }
